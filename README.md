@@ -40,3 +40,12 @@ Optionnellement, installer webapp (Doctrine, Twig, Forms...) :
 cd my_project_directory
 composer require webapp
 ```
+
+Si on utilise Apache, il faut installer apache-pack :
+
+```shell
+composer require symfony/apache-pack
+```
+
+
+
