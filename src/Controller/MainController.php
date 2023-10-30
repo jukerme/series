@@ -30,7 +30,11 @@ class MainController extends AbstractController
     public function test()
     {
         $colors = ["orange", "rouge", "vert", "bleu"];
-        return $this->render("main/test.html.twig", ['colours' => $colors]);
+        $today = new \DateTime();
+        return $this->render("main/test.html.twig", [
+            'colours' => $colors,
+            'today' => $today
+        ]);
     }
 
 

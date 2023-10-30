@@ -10,14 +10,25 @@
     {% set firstName = "Pierre" %}
     <h2>Bonjour {{ firstName }}</h2>
 
+    <p>Il y a {{ colours|length }} couleurs.</p>
+
+    <p>{{ colours|join(', ') }}</p>
+
     <ul>
         {% for colour in colours %}
-            <li>{{ colour }}</li>
+            <li>
+                {{ colour }}
+                {% if not loop.last %}
+                    <hr>
+                {% endif %}
+            </li>
         {% endfor %}
     </ul>
 
     {% set book = { title: 'Hamlet', year: 1800 } %}
     <p>{{ book.title }}</p>
+
+    <p>{{ today|date('d/m/Y H:i') }}</p>
 
 {% endblock %}
 
