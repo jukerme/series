@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page test{% endblock %}
+
+
+{% block body %}
+    <h1>Page test</h1>
+
+    {# Création d'une variable #}
+    {% set firstName = "Pierre" %}
+    <h2>Bonjour {{ firstName }}</h2>
+
+    <ul>
+        {% for colour in colours %}
+            <li>{{ colour }}</li>
+        {% endfor %}
+    </ul>
+
+    {% set book = { title: 'Hamlet', year: 1800 } %}
+    <p>{{ book.title }}</p>
+
+{% endblock %}
+

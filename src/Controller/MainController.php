@@ -23,4 +23,22 @@ class MainController extends AbstractController
         return new Response("Page contact");
     }
 
+
+    /**
+     * @Route("/test", name="test")
+     */
+    public function test()
+    {
+        $colors = ["orange", "rouge", "vert", "bleu"];
+        return $this->render("main/test.html.twig", ['colours' => $colors]);
+    }
+
+
+
+
+
+
+
+
+
 }
